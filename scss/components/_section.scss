@@ -1,0 +1,20 @@
+@import '../_variables';
+@import '../_mixins';
+
+.section {
+	@include card();
+}
+
+$title-height: $font-size-medium * 2;
+
+.section-title {
+	margin-bottom: 0.2em;
+	font-size: $font-size-medium;
+	font-weight: $font-weight-normal;
+	border: none;
+}
+
+.section .section-title {
+	margin-bottom: 1em;
+	margin-top: 0;
+}

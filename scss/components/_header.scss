@@ -1,0 +1,44 @@
+@import '../_variables';
+@import '../_mixins';
+
+$header-height: 64px;
+
+#header {
+	border: none;
+}
+
+#header {
+	@include shadow(2);
+	height: $header-height;
+	padding: 0 $margin;
+	background: $col-primary;
+
+	.title,
+	.version {
+		float: left;
+		font-family: $font-primary;
+		font-size: $font-size-medium;
+		color: $col-primary-fg;
+	}
+
+	.title {
+		font-weight: $font-weight-bold;
+		margin-right: 0.5em;
+	}
+
+	.version {
+		font-weight: $font-weight-normal;
+		opacity: 0.5;
+	}
+}
+
+#ident {
+	position: absolute;
+	top: 0;
+	right: $margin;
+	height: $header-height;
+	line-height: $header-height;
+	font-family: $font-primary;
+	font-size: $font-size-medium;
+	color: $col-primary-fg;
+}

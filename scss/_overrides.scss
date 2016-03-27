@@ -1,0 +1,9 @@
+// Non-layout overrides
+@import '_variables';
+
+body,
+#content,
+td {
+	font-family: $font-primary;
+	font-size: $font-size-base;
+}

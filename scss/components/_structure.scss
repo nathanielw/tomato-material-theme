@@ -1,0 +1,41 @@
+// Overall page strucuring and fixes
+
+@import '../variables';
+
+body,
+html {
+	padding: 0;
+	margin: 0;
+}
+
+#container {
+	width: 100%;
+	margin: 0 auto;
+	background: #f4f4f4;
+}
+
+#header {
+	z-index: 111;
+}
+
+// Un-tabling the internals of the table
+#body {
+	display: flex;
+	align-items: stretch;
+}
+
+#navi,
+#content {
+	display: block;
+}
+
+#navi {
+	width: 260px;
+	flex-shrink: 0;
+}
+
+#content {
+	flex-grow: 1;
+	max-width: 1200px;
+	padding: $margin;
+}

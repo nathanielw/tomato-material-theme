@@ -1,0 +1,42 @@
+@import '../_variables';
+
+#navi {
+	background: $col-bg-dark;
+
+	a {
+		font-family: $font-primary;
+		font-weight: $font-weight-normal;
+		font-size: $font-size-base;
+		color: $col-bg-dark-fg;
+		opacity: 0.6;
+
+		&:hover {
+			background: inherit;
+			opacity: 1;
+		}
+
+		&.indent1,
+		&.indent2 {
+			padding-top: $margin/2;
+			padding-bottom: $margin/2;
+		}
+
+		&.indent1 {
+			padding-left: $margin;
+			font-weight: $font-weight-bold;
+
+			&.active {
+				background: rgba(white, 0.1);
+			}
+		}
+
+		&.indent2 {
+			padding-left: $margin * 2;
+			&.active {
+				background: rgba($col-primary, 0.2);
+				opacity: 1;
+				font-weight: $font-weight-normal;
+			}
+		}
+	}
+}
