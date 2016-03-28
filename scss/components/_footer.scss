@@ -1,0 +1,35 @@
+@import '../_variables';
+@import '../_mixins';
+
+// element containing the footer
+#container > tbody > tr:last-child {
+	display: block;
+	box-sizing: border-box;
+	height: auto;
+	width: 100%;
+	padding-left: $sidebar-width;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+#footer {
+	@extend %clearfix;
+	@include shadow(4);
+
+	display: block;
+	height: auto;
+	box-sizing: border-box;
+	width: 100%;
+	padding: $margin/2 $margin;
+	border: none;
+	background: $col-bg-light;
+
+	input {
+		width: auto;
+	}
+}
+
+#content {
+	padding-bottom: 70px;
+}

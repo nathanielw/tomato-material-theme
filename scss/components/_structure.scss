@@ -22,6 +22,7 @@ html {
 #body {
 	display: flex;
 	align-items: stretch;
+	min-height: 100vh;
 }
 
 #navi,
@@ -30,12 +31,13 @@ html {
 }
 
 #navi {
-	width: 260px;
+	width: $sidebar-width;
 	flex-shrink: 0;
 }
 
 #content {
 	flex-grow: 1;
+	width: auto;
 	max-width: 1200px;
 	padding: $margin;
 }

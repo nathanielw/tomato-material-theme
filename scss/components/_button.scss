@@ -1,0 +1,120 @@
+@import '../_variables';
+@import '../_mixins';
+
+%button {
+	@include shadow(1);
+	width: auto;
+	padding: 8px 16px;
+	font-family: $font-primary;
+	font-weight: $font-weight-medium;
+	font-size: $font-size-base;
+	text-transform: uppercase;
+	color: $col-bg-light-fg;
+	background: $col-bg-light;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+
+	transition: background 0.2s;
+
+	&[disabled] {
+		cursor: auto;
+	}
+}
+
+@mixin _button-text($col) {
+	@extend %button;
+
+	color: $col;
+	background: transparent;
+	box-shadow: none;
+
+	&:hover,
+	&:focus {
+		background: rgba($col, 0.15);
+	}
+
+	&:active {
+		background: rgba($col, 0.3);
+	}
+
+	&[disabled] {
+		color: rgba($col-bg-light-fg, 0.26);
+
+		&:hover,
+		&:active {
+			background: transparent;
+		}
+	}
+}
+
+%button--text {
+	@include _button-text($col-bg-light-fg);
+}
+
+%button--text-secondary {
+	@include _button-text($col-secondary);
+}
+
+@mixin _button-solid($fg, $bg) {
+	@extend %button;
+
+	color: $fg;
+	background: $bg;
+	box-shadow: none;
+
+	&:hover,
+	&:focus {
+		background: darken($bg, 5%);
+	}
+
+	&:active {
+		background: darken($bg, 10%);
+	}
+}
+
+%button--solid-primary {
+	@include _button-solid($col-primary-fg, $col-primary);
+}
+
+
+input[type="button"] {
+	@extend %button;
+}
+
+// Buttons within sections
+.section {
+	input[type="button"] {
+		@extend %button--text-secondary;
+
+
+		&.controls {
+			float: right;
+			margin-bottom: -8px;
+
+			&:first-of-type {
+				margin-right: -16px;
+			}
+		}
+	}
+}
+
+// Footer buttons
+#footer {
+	input[type="button"] {
+		float: right;
+		margin-left: 8px;
+
+		@extend %button--text;
+
+		&[value="Save"],
+		&[value="Refresh"],
+		&[value="Stop"] {
+			@extend %button--solid-primary;
+		}
+	}
+}
+
+#refresh-button {
+	width: auto;
+}

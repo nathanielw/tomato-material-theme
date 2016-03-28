@@ -7,6 +7,9 @@
 	@if $level == 2 {
 		box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 1px 10px 0 rgba(0,0,0,.12);
 	}
+	@if $level == 4 {
+		box-shadow: 0 6px 15px 0 rgba(0,0,0,.2), 0 15px 40px 0 rgba(0,0,0,.16);
+	}
 }
 
 %card {
@@ -19,4 +22,12 @@
 
 @mixin card() {
 	@extend %card;
+}
+
+%clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
 }

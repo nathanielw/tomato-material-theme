@@ -1,5 +1,6 @@
 $col-primary: #8BC34A;
 $col-primary-fg: white;
+$col-secondary: #b82d42;
 $col-bg-dark: #3b4138;
 $col-bg-dark-fg: white;
 $col-bg-light: white;
@@ -7,8 +8,10 @@ $col-bg-light-fg: #333;
 
 $font-primary: Roboto, sans-serif;
 $font-weight-normal: 400;
+$font-weight-medium: 500;
 $font-weight-bold: 700;
 $font-size-base: 14px;
 $font-size-medium: $font-size-base * 1.4;
 
 $margin: 24px;
+$sidebar-width: 260px;

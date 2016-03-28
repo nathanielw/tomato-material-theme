@@ -3,6 +3,7 @@
 
 .section {
 	@include card();
+	@extend %clearfix;
 }
 
 $title-height: $font-size-medium * 2;
@@ -12,6 +13,17 @@ $title-height: $font-size-medium * 2;
 	font-size: $font-size-medium;
 	font-weight: $font-weight-normal;
 	border: none;
+
+	// Show/hide toggle
+	small {
+		float: right;
+		padding-top: 0.25em;
+		font-size: 0.75em;
+
+		a {
+			color: $col-bg-light-fg;
+		}
+	}
 }
 
 .section .section-title {

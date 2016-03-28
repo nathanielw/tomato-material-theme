@@ -7,3 +7,12 @@ td {
 	font-family: $font-primary;
 	font-size: $font-size-base;
 }
+
+a {
+	color: $col-secondary;
+
+	&:hover {
+		background: inherit;
+		color: $col-secondary;
+	}
+}
