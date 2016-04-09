@@ -1,5 +1,6 @@
 // Non-layout overrides
 @import '_variables';
+@import '_mixins';
 
 body,
 #content,
@@ -9,10 +10,5 @@ td {
 }
 
 a {
-	color: $col-secondary;
-
-	&:hover {
-		background: inherit;
-		color: $col-secondary;
-	}
+	@include link();
 }

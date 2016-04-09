@@ -20,8 +20,21 @@
 	border-radius: 2px;
 }
 
-@mixin card() {
-	@extend %card;
+%uncard {
+	box-shadow: none;
+	padding: none;
+	background: transparent;
+	border-radius: 0;
+}
+
+
+@mixin link() {
+	color: $col-secondary;
+
+	&:hover {
+		background: inherit;
+		color: $col-secondary;
+	}
 }
 
 %clearfix {

@@ -1,0 +1,97 @@
+@import '../_variables';
+@import '../_mixins';
+
+.tomato-grid,
+table.bwmg {
+	border: none;
+	border-spacing: 0;
+}
+
+
+table.tomato-grid,
+table.bwmg {
+	@extend %card;
+	padding: 0;
+}
+
+.section table.tomato-grid,
+.section table.bwmg {
+	@extend %uncard;
+}
+
+
+// Header row
+tr.header,
+.tomato-grid .header,
+.bwmg .header {
+	background: transparent;
+}
+
+// Header cells
+tr.header td,
+.tomato-grid .header td,
+.bwmg .header td {
+	font-family: $font-primary;
+	font-weight: $font-weight-medium;
+	font-size: $font-size-base;
+	color: lighten($col-bg-light-fg, 30%);
+	background: transparent;
+
+	&.sortasc,
+	&.sortdes {
+		color: lighten($col-bg-light-fg, 10%);
+	}
+}
+
+tr.even,
+tr.odd,
+.tomato-grid .even,
+.tomato-grid .odd,
+.bwmg .even,
+.bwmg .odd {
+	background: transparent;
+
+	&:hover {
+		background: $col-grey-100;
+	}
+}
+
+.tomato-grid,
+.bwmg {
+	td {
+		padding: 16px 20px;
+		font-family: $font-primary;
+		font-weight: $font-weight-normal;
+		font-size: $font-size-base;
+		color: $col-bg-light-fg;
+		border-bottom: 1px solid $col-grey-200;
+		background: transparent;
+	}
+
+	.footer {
+		background: transparent;
+
+		td {
+			font-weight: $font-weight-medium;
+		}
+	}
+
+	.controls td {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		background: $col-grey-100;
+	}
+
+	.editor td {
+		background: $col-grey-100;
+		border-bottom: none;
+	}
+
+	a {
+		@include link();
+	}
+}
+
+#sm-grid {
+	width: auto;
+}

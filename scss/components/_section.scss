@@ -2,14 +2,19 @@
 @import '../_mixins';
 
 .section {
-	@include card();
+	@extend %card;
 	@extend %clearfix;
+
+	.section {
+		@extend %uncard;
+	}
 }
 
 $title-height: $font-size-medium * 2;
 
 .section-title {
-	margin-bottom: 0.2em;
+	margin-top: 1.6em;
+	margin-bottom: 0.6em;
 	font-size: $font-size-medium;
 	font-weight: $font-weight-normal;
 	border: none;
